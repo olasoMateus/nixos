@@ -1,0 +1,262 @@
+# aster — Observatory (yazi flavor)
+#:schema https://yazi-rs.github.io/schemas/theme.json
+
+# : Manager {{{
+
+[mgr]
+cwd = { fg = "#d4a24c", bold = true }
+
+# Find
+find_keyword  = { fg = "#f0c472", bold = true, underline = true }
+find_position = { fg = "#b08aa0", bg = "reset", bold = true, italic = true }
+
+# Symlink
+symlink_target = { fg = "#8fb5ad", italic = true }
+
+# Marker
+marker_copied   = { fg = "#9fb8a0", bg = "#9fb8a0" }
+marker_cut      = { fg = "#c8735a", bg = "#c8735a" }
+marker_marked   = { fg = "#7f9cb0", bg = "#7f9cb0" }
+marker_selected = { fg = "#d4a24c", bg = "#d4a24c" }
+marker_symbol   = "▌"
+
+# Count
+count_copied   = { fg = "#111113", bg = "#9fb8a0", bold = true }
+count_cut      = { fg = "#111113", bg = "#c8735a", bold = true }
+count_selected = { fg = "#111113", bg = "#d4a24c", bold = true }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#2a2620" }
+
+# : }}}
+
+
+# : Tabs {{{
+
+[tabs]
+active   = { fg = "#111113", bg = "#d4a24c", bold = true }
+inactive = { fg = "#9a917f", bg = "#1e1c19" }
+
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+# : }}}
+
+
+# : Mode {{{
+
+[mode]
+normal_main = { fg = "#111113", bg = "#d4a24c", bold = true }
+normal_alt  = { fg = "#d4a24c", bg = "#1e1c19" }
+
+select_main = { fg = "#111113", bg = "#9fb8a0", bold = true }
+select_alt  = { fg = "#9fb8a0", bg = "#1e1c19" }
+
+unset_main = { fg = "#111113", bg = "#c8735a", bold = true }
+unset_alt  = { fg = "#c8735a", bg = "#1e1c19" }
+
+# : }}}
+
+
+# : Indicator of hovered file {{{
+
+[indicator]
+parent  = { fg = "#e9e2d3", bg = "#1e1c19" }
+current = { fg = "#d4a24c", bg = "#2e2818", bold = true }
+preview = { underline = true }
+padding = { open = "", close = "" }
+
+# : }}}
+
+
+# : Status bar {{{
+
+[status]
+overall   = { fg = "#e9e2d3" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+# Permissions
+perm_sep   = { fg = "#4a4438" }
+perm_type  = { fg = "#7f9cb0" }
+perm_read  = { fg = "#d4a24c" }
+perm_write = { fg = "#c8735a" }
+perm_exec  = { fg = "#9fb8a0" }
+
+# Progress
+progress_label  = { fg = "#e9e2d3", bold = true }
+progress_normal = { fg = "#d4a24c", bg = "#1e1c19" }
+progress_error  = { fg = "#c8735a", bg = "#1e1c19" }
+
+# : }}}
+
+
+# : Which {{{
+
+[which]
+cols            = 3
+mask            = { bg = "#111113" }
+cand            = { fg = "#d4a24c" }
+rest            = { fg = "#6b6456" }
+desc            = { fg = "#9a917f" }
+separator       = " ▸ "
+separator_style = { fg = "#4a4438" }
+
+# : }}}
+
+
+# : Confirmation {{{
+
+[confirm]
+border     = { fg = "#d4a24c" }
+title      = { fg = "#d4a24c", bold = true }
+body       = {}
+list       = {}
+btn_yes    = { fg = "#111113", bg = "#d4a24c", bold = true }
+btn_no     = { fg = "#9a917f" }
+btn_labels = [ "  [Y]es  ", "  (N)o  " ]
+
+# : }}}
+
+
+# : Spotter {{{
+
+[spot]
+border   = { fg = "#d4a24c" }
+title    = { fg = "#d4a24c", bold = true }
+tbl_col  = { fg = "#7f9cb0" }
+tbl_cell = { fg = "#d4a24c", bg = "#2e2818" }
+
+# : }}}
+
+
+# : Notification {{{
+
+[notify]
+title_info  = { fg = "#9fb8a0" }
+title_warn  = { fg = "#d4a24c" }
+title_error = { fg = "#c8735a" }
+
+# : }}}
+
+
+# : Picker {{{
+
+[pick]
+border   = { fg = "#d4a24c" }
+active   = { fg = "#d4a24c", bg = "#2e2818", bold = true }
+inactive = {}
+
+# : }}}
+
+
+# : Input {{{
+
+[input]
+border   = { fg = "#d4a24c" }
+title    = { fg = "#d4a24c" }
+value    = {}
+selected = { bg = "#2e2818" }
+
+# : }}}
+
+
+# : Completion {{{
+
+[cmp]
+border   = { fg = "#d4a24c" }
+active   = { fg = "#d4a24c", bg = "#2e2818" }
+inactive = {}
+
+# : }}}
+
+
+# : Task manager {{{
+
+[tasks]
+border  = { fg = "#d4a24c" }
+title   = { fg = "#d4a24c" }
+hovered = { fg = "#d4a24c", bg = "#2e2818", bold = true }
+
+# : }}}
+
+
+# : Help menu {{{
+
+[help]
+border  = { fg = "#d4a24c" }
+chord   = { fg = "#d4a24c" }
+action  = { fg = "#9a917f" }
+hovered = { bg = "#2e2818", bold = true }
+
+# : }}}
+
+
+# : File-specific styles {{{
+
+[filetype]
+rules = [
+	# Image
+	{ mime = "**/image/*", fg = "#b08aa0" },
+	# Media
+	{ mime = "**/{audio,video}/*", fg = "#c9a6ba" },
+	# Archive
+	{ mime = "**/application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#c8735a" },
+	# Document
+	{ mime = "**/application/{pdf,doc,rtf}", fg = "#9cb8cb" },
+	# Virtual file system
+	{ mime = "vfs/{absent,stale}", fg = "#4a4438" },
+	# Special file
+	{ url = "*", is = "orphan", fg = "#c8735a", crossed = true },
+	{ url = "*", is = "exec", fg = "#9fb8a0" },
+	# Dummy file
+	{ url = "*", is = "dummy", fg = "#c8735a", crossed = true },
+	{ url = "*/", is = "dummy", fg = "#c8735a", crossed = true },
+	# Fallback
+	{ url = "*/", fg = "#7f9cb0", bold = true },
+]
+
+# : }}}
+
+
+# : Icons {{{
+# Folder and fallback icons recolored to the theme; per-language file icons
+# keep yazi's defaults so they stay recognizable.
+
+[icon]
+dirs = [
+	{ name = ".config", text = "", fg = "#7f9cb0" },
+	{ name = ".git", text = "", fg = "#7f9cb0" },
+	{ name = ".github", text = "", fg = "#7f9cb0" },
+	{ name = ".npm", text = "", fg = "#7f9cb0" },
+	{ name = "Desktop", text = "", fg = "#7f9cb0" },
+	{ name = "Development", text = "", fg = "#7f9cb0" },
+	{ name = "Documents", text = "", fg = "#7f9cb0" },
+	{ name = "Downloads", text = "", fg = "#7f9cb0" },
+	{ name = "Library", text = "", fg = "#7f9cb0" },
+	{ name = "Movies", text = "", fg = "#7f9cb0" },
+	{ name = "Music", text = "", fg = "#7f9cb0" },
+	{ name = "Pictures", text = "", fg = "#7f9cb0" },
+	{ name = "Public", text = "", fg = "#7f9cb0" },
+	{ name = "Videos", text = "", fg = "#7f9cb0" },
+]
+conds = [
+	# Special files
+	{ if = "orphan", text = "", fg = "#c8735a" },
+	{ if = "link", text = "", fg = "#8fb5ad" },
+	{ if = "block", text = "", fg = "#b08aa0" },
+	{ if = "char", text = "", fg = "#b08aa0" },
+	{ if = "fifo", text = "󰟢", fg = "#b08aa0" },
+	{ if = "sock", text = "", fg = "#b08aa0" },
+	{ if = "sticky", text = "", fg = "#b08aa0" },
+	{ if = "dummy", text = "", fg = "#c8735a" },
+
+	# Fallback
+	{ if = "dir & hovered", text = "", fg = "#7f9cb0" },
+	{ if = "dir", text = "", fg = "#7f9cb0" },
+	{ if = "exec", text = "", fg = "#9fb8a0" },
+	{ if = "!dir", text = "", fg = "#9a917f" },
+]
+
+# : }}}

@@ -1,0 +1,58 @@
+/* aster — Observatory (wofi) */
+
+* {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+}
+
+window {
+  background-color: #111113;
+  border: 1px solid #d4a24c;
+  border-radius: 0;
+}
+
+#outer-box,
+#inner-box,
+#scroll {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+#input {
+  margin: 0;
+  padding: 12px 14px;
+  background-color: #111113;
+  color: #e9e2d3;
+  border: none;
+  border-bottom: 1px solid #2a2620;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  font-size: 16px;
+  caret-color: #d4a24c;
+}
+
+#input:focus {
+  border: none;
+  border-bottom: 1px solid #2a2620;
+  box-shadow: none;
+}
+
+#entry {
+  padding: 10px 14px;
+  border-radius: 0;
+}
+
+#entry:selected {
+  background-color: #1e1a12;
+  outline: none;
+}
+
+#text {
+  color: #e9e2d3;
+}
+
+#entry:selected #text {
+  color: #d4a24c;
+}

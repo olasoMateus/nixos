@@ -1,0 +1,189 @@
+/* aster — Observatory (swaync)
+ * ground  #0a0a0b   surface #111113   rule  #2a2620
+ * text    #e9e2d3   muted   #9a917f   dim   #4a4438
+ * brass   #d4a24c   brass-bg #1e1a12   alert #c8735a
+ */
+
+* {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* ---------- Notification cards (popups and in the panel) ---------- */
+
+.notification-row {
+  outline: none;
+  background: transparent;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+  background: transparent;
+}
+
+.notification-background {
+  padding: 4px 0;
+}
+
+.notification {
+  background: #111113;
+  border: 1px solid #2a2620;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-row:hover .notification {
+  border-color: #d4a24c;
+}
+
+.notification.critical {
+  border-color: #c8735a;
+}
+
+.notification-content {
+  padding: 12px 14px;
+}
+
+.notification-default-action,
+.notification-action {
+  background: transparent;
+  border: none;
+  color: #e9e2d3;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+  background: #1e1a12;
+}
+
+.notification-action {
+  border-top: 1px solid #2a2620;
+  padding: 8px;
+  color: #d4a24c;
+}
+
+.summary {
+  color: #e9e2d3;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.time {
+  color: #9a917f;
+  font-size: 11px;
+  margin-right: 24px;
+}
+
+.body {
+  color: #9a917f;
+  font-size: 12.5px;
+}
+
+.app-icon,
+.image {
+  margin-right: 10px;
+}
+
+.close-button {
+  background: transparent;
+  color: #9a917f;
+  border: 1px solid #2a2620;
+  margin: 8px;
+  padding: 0;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.close-button:hover {
+  background: #d4a24c;
+  color: #111113;
+  border-color: #d4a24c;
+}
+
+.notification-group-headers,
+.notification-group-header {
+  color: #9a917f;
+}
+
+/* ---------- Control center (the panel) ---------- */
+
+.control-center {
+  background: #111113;
+  border: 1px solid #d4a24c;
+  padding: 0;
+  color: #e9e2d3;
+}
+
+.control-center-list {
+  background: transparent;
+  padding: 0 10px;
+}
+
+.control-center-list-placeholder {
+  color: #4a4438;
+}
+
+.floating-notifications,
+.blank-window {
+  background: transparent;
+}
+
+/* Title: SIGNALS ............. CLEAR */
+.widget-title {
+  padding: 0 0 0 14px;
+  margin: 0;
+  border-bottom: 1px solid #2a2620;
+  color: #9a917f;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.widget-title > label {
+  color: #9a917f;
+  font-size: 11px;
+}
+
+.widget-title > button {
+  background: transparent;
+  color: #d4a24c;
+  border: none;
+  border-left: 1px solid #2a2620;
+  padding: 8px 14px;
+  font-size: 11px;
+}
+
+.widget-title > button:hover {
+  background: #d4a24c;
+  color: #111113;
+}
+
+/* Do-not-disturb row */
+.widget-dnd {
+  padding: 10px 14px;
+  margin: 0 0 6px 0;
+  border-bottom: 1px solid #2a2620;
+  color: #9a917f;
+  font-size: 11px;
+}
+
+.widget-dnd > switch {
+  background: #0a0a0b;
+  border: 1px solid #2a2620;
+}
+
+.widget-dnd > switch:checked {
+  background: #1e1a12;
+  border-color: #d4a24c;
+}
+
+.widget-dnd > switch slider {
+  background: #9a917f;
+  border-radius: 0;
+}
+
+.widget-dnd > switch:checked slider {
+  background: #d4a24c;
+}

@@ -1,0 +1,8 @@
+result*
+docs/
+
+# Never commit plaintext secrets
+.env
+*.key
+*.pem
+secrets/

@@ -1,0 +1,118 @@
+/* aster — Observatory
+ * ground  #0a0a0b   surface #111113   rule  #2a2620
+ * text    #e9e2d3   muted   #9a917f   dim   #4a4438
+ * brass   #d4a24c   brass-bg #1e1a12
+ */
+
+* {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12.5px;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+window#waybar {
+  background: #111113;
+  color: #e9e2d3;
+  border-bottom: 1px solid #2a2620;
+}
+
+tooltip {
+  background: #111113;
+  border: 1px solid #d4a24c;
+}
+
+tooltip label {
+  color: #e9e2d3;
+}
+
+/* Brass tab */
+#custom-host {
+  background: #d4a24c;
+  color: #111113;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 0 16px;
+}
+
+/* Moon phases */
+#workspaces {
+  padding: 0 8px;
+  border-right: 1px solid #2a2620;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: #9a917f;
+  background: transparent;
+  font-size: 14px;
+}
+
+#workspaces button.active {
+  color: #d4a24c;
+}
+
+#workspaces button.empty {
+  color: #4a4438;
+}
+
+#workspaces button.urgent {
+  color: #c8735a;
+}
+
+#workspaces button:hover {
+  background: #1e1a12;
+  color: #e9e2d3;
+}
+
+#window {
+  padding: 0 14px;
+  color: #9a917f;
+}
+
+/* Center: time + date */
+#clock {
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+#custom-date {
+  color: #9a917f;
+}
+
+/* Right-side readouts separated by hairlines */
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#battery,
+#custom-uptime,
+#tray,
+#custom-notification {
+  padding: 0 14px;
+  border-left: 1px solid #2a2620;
+}
+
+#pulseaudio.muted {
+  color: #4a4438;
+}
+
+#battery.warning:not(.charging) {
+  color: #d4a24c;
+}
+
+#battery.critical:not(.charging) {
+  color: #c8735a;
+}
+
+#network.disconnected {
+  color: #c8735a;
+}
+
+#custom-notification.notification,
+#custom-notification.dnd-notification {
+  background: #1e1a12;
+}
